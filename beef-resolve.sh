@@ -37,11 +37,12 @@ sleep 2
 cd beef-xss
 sleep 2
 echo 
-echo -e ${YELLOW}'\n\n[*] Locate At Your config.yaml'${RESET}${BOLD}' db_file: "beef.db"'${RESET} ${YELLOW}',change to'${RESET} ${BOLD}'db_file: "db/beef.db"'${RESET}${YELLOW}',save and exit to contunie'${RESET}
-echo && echo -e ${YELLOW}'[*] Wait To Open config.yaml......'${RESET}
-sleep 4
-echo
-leafpad config.yaml
+mv config.yaml config.txt
+sleep 2
+sed -i '/db_file:/s/"beef.db"/"db\/beef.db"/g' config.txt
+sleep 2
+mv config.txt config.yaml
+sleep 2
 mv /usr/share/beef-xss/config.yaml /etc/beef-xss
 ln -s /etc/beef-xss/config.yaml /usr/share/beef-xss/config.yaml
 ln -s /var/lib/beef-xss/ /usr/share/beef-xss/db
