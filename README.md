@@ -1,10 +1,14 @@
 # kali-rolling-beef-fix
 
-# this script help you to resolve all beef-xss problem's in kali-rolling
+# This Script Help You To Resolve All beef-xss Problem's In kali-rolling
 
 # Youtube: https://www.youtube.com/channel/UC3miO-JcqsorPhmtFTJZ21g
 
-how to run ?
+How to run ?
+
+git clone https://github.com/ziflar/beef-xss_fix.git
+
+cd /beef-xss_fix
 
 chmod +x beef-resolv.sh 
 
