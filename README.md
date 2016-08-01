@@ -10,8 +10,8 @@ git clone https://github.com/ziflar/beef-xss_fix.git
 
 cd /beef-xss_fix
 
-chmod +x beef-resolv.sh 
+chmod +x beef-resolve.sh 
 
-./beef-resolv.sh
+./beef-resolve.sh
 
 
