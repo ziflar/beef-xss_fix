@@ -25,6 +25,15 @@ if [ -d "/usr/share/beef-xss" ]; then
 echo -e ${BOLD}'\nbeef-xss exist \n'${RESET}
 fi
 sleep 1
+
+cd /usr/bin
+mv beef-xss beef-xss.txt
+sed -i '/xdg/s/http\:\/\/\$ip\:\$port\/ui\/panel/http\:\/\/\$ip\:\$port\/ui\/panel\ \>\&\ \/dev\/null\ \&/g' beef-xss.txt
+sed -i 7i"ip\=\$\(ip route show \| awk '\(NR \=\= \2\) \{print \$\9\}'\)" beef-xss.txt
+sleep 2
+mv beef-xss.txt beef-xss
+chmod +x beef-xss
+sleep 2
 rm -r /usr/share/beef-xss
 sleep 2
 rm -r /etc/beef-xss/config.yaml
@@ -35,6 +44,7 @@ git clone https://github.com/beefproject/beef.git
 mv beef beef-xss
 sleep 2
 cd beef-xss
+rm -r INSTALL.txt install liveCD install-beef
 sleep 2
 echo 
 mv config.yaml config.txt
