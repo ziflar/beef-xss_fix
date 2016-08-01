@@ -1,24 +1,28 @@
 #!/bin/bash
 #
-# - Coded By Ziflar zemba 
-#
-# - Youtube_channel :  https://www.youtube.com/channel/UC3miO-JcqsorPhmtFTJZ21g
-#
-# - This script help you to resolve all problem beef in kali rolling
-#  
-# - Run:
-# ./beef_resolv.sh - Installs all dependencies. Best run from Kali Linux
-
 BOLD="\033[01;01m"     # Highlight
 RED="\033[01;31m"      # Issues/Errors
 GREEN="\033[01;32m"    # Success
 YELLOW="\033[01;33m"   # Warnings/Information
 RESET="\033[00m"       # Normal
-clear
 ip=$(ip route show | awk '(NR == 2) {print $9}')
+clear
+echo -e "
+${BOLD}
+- Coded By Ziflar zemba 
+
+- Youtube_channel :  https://www.youtube.com/channel/UC3miO-JcqsorPhmtFTJZ21g
+
+- This Script Help You To Resolve All beef Problem's In kali rolling
+  
+- Installs All Dependencies. Best run from Kali Linux Rolling
+ 
+"${RESET}          
+sleep 4
+echo 
 service beef-xss stop
 if [ -d "/usr/share/beef-xss" ]; then
-echo && echo -e ${BOLD}'\nbeef-xss exist \n'${RESET}
+echo -e ${BOLD}'\nbeef-xss exist \n'${RESET}
 fi
 sleep 1
 rm -r /usr/share/beef-xss
@@ -32,10 +36,9 @@ mv beef beef-xss
 sleep 2
 cd beef-xss
 sleep 2
-echo && echo 
+echo 
 echo -e ${YELLOW}'\n\n[*] Locate At Your config.yaml'${RESET}${BOLD}' db_file: "beef.db"'${RESET} ${YELLOW}',change to'${RESET} ${BOLD}'db_file: "db/beef.db"'${RESET}${YELLOW}',save and exit to contunie'${RESET}
-echo && echo
-echo -e ${YELLOW}'[*] Wait To Open config.yaml......'${RESET}
+echo && echo -e ${YELLOW}'[*] Wait To Open config.yaml......'${RESET}
 sleep 4
 echo
 leafpad config.yaml
