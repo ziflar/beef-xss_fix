@@ -25,7 +25,14 @@ if [ -d "/usr/share/beef-xss" ]; then
 echo -e ${BOLD}'\nbeef-xss exist \n'${RESET}
 fi
 sleep 1
-
+apt-get --purge remove beef-xss
+sleep 2
+rm -r usr/bin/beef-xss
+sleep 1
+apt-get install beef-xss
+sleep 2
+apt-get clean && apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
+sleep 2
 cd /usr/bin
 mv beef-xss beef-xss.txt
 sed -i '/xdg/s/http\:\/\/\$ip\:\$port\/ui\/panel/http\:\/\/\$ip\:\$port\/ui\/panel\ \>\&\ \/dev\/null\ \&/g' beef-xss.txt
