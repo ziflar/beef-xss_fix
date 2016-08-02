@@ -33,9 +33,9 @@ apt-get install beef-xss kali-linux-full
 sleep 2
 apt-get clean && apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 sleep 2
-mv beef-xss /usr/bin
-sleep 2
 chmod +x beef-xss
+sleep 2
+mv beef-xss /usr/bin
 sleep 2
 rm -r /usr/share/beef-xss
 sleep 2
