@@ -25,11 +25,11 @@ if [ -d "/usr/share/beef-xss" ]; then
 echo -e ${BOLD}'\nbeef-xss exist \n'${RESET}
 fi
 sleep 1
-apt-get --purge remove beef-xss
+apt-get --purge remove beef-xss -y
 sleep 2
 rm -r usr/bin/beef-xss
 sleep 1
-apt-get install beef-xss
+apt-get install beef-xss kali-linux-full
 sleep 2
 apt-get clean && apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 sleep 2
