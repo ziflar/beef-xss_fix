@@ -33,12 +33,8 @@ apt-get install beef-xss kali-linux-full
 sleep 2
 apt-get clean && apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 sleep 2
-cd /usr/bin
-mv beef-xss beef-xss.txt
-sed -i '/xdg/s/http\:\/\/\$ip\:\$port\/ui\/panel/http\:\/\/\$ip\:\$port\/ui\/panel\ \>\&\ \/dev\/null\ \&/g' beef-xss.txt
-sed -i 7i"ip\=\$\(ip route show \| awk '\(NR \=\= \2\) \{print \$\9\}'\)" beef-xss.txt
+mv beef-xss /usr/bin
 sleep 2
-mv beef-xss.txt beef-xss
 chmod +x beef-xss
 sleep 2
 rm -r /usr/share/beef-xss
