@@ -71,7 +71,7 @@ gnome-terminal -x sh -c 'cd /usr/share/beef-xss && ./beef; exec bash'
 echo -e ${BOLD}'[*] Wait To Be Redirected To Your BeEF Web Interface......'${RESET}
 sleep 2
 echo -e ${YELLOW}"[*] When it's done, Login To Your BeEF Control Panel With (user/pass)=beef,To Generate a Beef Database"${RESET}
-sleep 15
+sleep 20
 xdg-open http://$ip:$port/ui/panel
 sleep 6
 echo && echo -e ${RED}'\n\n Have You Been loged To Your BeEF Control Panel ? (Y/N)\n\n'${RESET}
