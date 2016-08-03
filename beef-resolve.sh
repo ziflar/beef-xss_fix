@@ -30,7 +30,8 @@ sleep 2
 rm -r usr/bin/beef-xss
 sleep 1
 clear
-echo -e ${BOLD}'[*] Wait Please......'${RESET}
+echo -e ${BOLD}'[*] Wait Please....................................'${RESET}
+echo
 apt-get install beef-xss kali-linux-full -y &> /dev/null
 sleep 2
 apt-get clean && apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
