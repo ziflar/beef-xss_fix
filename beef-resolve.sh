@@ -29,6 +29,7 @@ apt-get --purge remove beef-xss -y
 sleep 2
 rm -r usr/bin/beef-xss
 sleep 1
+clear
 echo -e ${BOLD}'[*] Wait Please......'${RESET}
 apt-get install beef-xss kali-linux-full -y &> /dev/null
 sleep 2
