@@ -1,6 +1,6 @@
 # Installing beef-xss from github in kali linux
 
-This Script help you to install beef-xss from github in kali linux adn resolve  all beef-xss problem's in kali-linux
+This Script help you to install beef-xss from github in kali linux and resolve  all beef-xss problem's in kali-linux
 
 # Youtube: https://www.youtube.com/channel/UC3miO-JcqsorPhmtFTJZ21g
 
