@@ -32,7 +32,7 @@ sleep 1
 clear
 echo -e ${BOLD}'[*] Wait Please....................................'${RESET}
 echo
-apt-get install beef-xss kali-linux-full -y &> /dev/null
+apt-get install beef-xss kali-linux-full nodjs -y &> /dev/null
 sleep 2
 apt-get clean && apt-get update && apt-get upgrade -y && apt-get dist-upgrade -y
 sleep 2
@@ -65,6 +65,7 @@ apt-get install libsqlite3-dev
 sleep 2
 gem install rake
 gem install rubocop
+gem update --system
 bundle install
 sleep 2
 clear
