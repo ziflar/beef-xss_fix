@@ -63,6 +63,8 @@ ln -s /etc/beef-xss/config.yaml /usr/share/beef-xss/config.yaml
 ln -s /var/lib/beef-xss/ /usr/share/beef-xss/db
 apt-get install libsqlite3-dev
 sleep 2
+gem install rake
+gem install rubocop
 bundle install
 sleep 2
 clear
