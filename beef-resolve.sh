@@ -49,7 +49,7 @@ sleep 2
 git clone https://github.com/beefproject/beef.git beef-xss
 sleep 2
 cd beef-xss
-rm -r INSTALL.txt install liveCD install-beef
+rm -r INSTALL.txt install liveCD install-beef .ruby-version
 sleep 2
 echo 
 mv config.yaml config.txt
