@@ -66,6 +66,8 @@ sleep 2
 gem install rake
 gem install rubocop
 gem update --system
+gem update bundler
+gem install bundler
 bundle install
 sleep 2
 clear
