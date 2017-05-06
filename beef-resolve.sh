@@ -49,7 +49,7 @@ sleep 2
 git clone https://github.com/beefproject/beef.git beef-xss
 sleep 2
 cd beef-xss
-rm -r INSTALL.txt install liveCD install-beef .ruby-version
+rm -r INSTALL.txt install liveCD install-beef 
 sleep 2
 echo 
 mv config.yaml config.txt
@@ -65,6 +65,7 @@ apt-get install libsqlite3-dev
 sleep 2
 gem install rake
 gem install rubocop
+gem install therubyracer -v 0.12.2
 gem update bundler
 gem update --system
 gem install bundler
