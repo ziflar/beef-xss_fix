@@ -71,6 +71,7 @@ gem update --system
 gem install bundler
 bundle install
 sleep 2
+ln -s /var/lib/gems/2.3.0/gems/geoip-1.6.3/data /usr/lib/ruby/data
 clear
 port=$(ruby -ryaml -e "print YAML.load_file('/etc/beef-xss/config.yaml')['beef']['http']['port']")
 gnome-terminal -x sh -c 'cd /usr/share/beef-xss && ./beef; exec bash'
